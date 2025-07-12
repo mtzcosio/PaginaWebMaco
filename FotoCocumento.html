@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Captura de INE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      margin: 20px 0;
+    }
+
+    .camera-container {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Marco guía para centrar el INE */
+    .frame-guide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      height: 40%;
+      transform: translate(-50%, -50%);
+      border: 1px  white;
+      border-radius: 10px;
+      box-shadow: 0 0 5px 2px rgba(255,255,255,0.6);
+      pointer-events: none; /* Permite hacer clic en el botón */
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    canvas, img {
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      border: 2px solid #444;
+      border-radius: 8px;
+    }
+
+    #downloadLink {
+      display: none;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: white;
+      background: green;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Captura tu INE</h2>
+
+  <div class="camera-container">
+    <video id="video" autoplay></video>
+    <div class="frame-guide"></div> <!-- Recuadro guía -->
+  </div>
+
+  <button id="capture">Tomar Foto</button>
+
+  <canvas id="canvas" style="display:none;"></canvas>
+  <img id="photo" alt="Foto de INE" />
+  <a id="downloadLink" download="foto_ine.png">Descargar Foto</a>
+
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const photo = document.getElementById('photo');
+    const captureButton = document.getElementById('capture');
+    const downloadLink = document.getElementById('downloadLink');
+
+    // Acceder a la cámara
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then((stream) => {
+        video.srcObject = stream;
+      })
+      .catch((err) => {
+        alert('No se pudo acceder a la cámara: ' + err);
+      });
+
+    // Capturar foto
+    captureButton.addEventListener('click', () => {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      const dataUrl = canvas.toDataURL('image/png');
+      photo.src = dataUrl;
+      downloadLink.href = dataUrl;
+      downloadLink.style.display = 'inline-block';
+    });
+  </script>
+</body>
+</html>
