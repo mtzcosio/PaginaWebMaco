@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Escáner QR / Barras en Vivo</title>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <style>
+    #reader {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      border: 2px solid #000;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Escaneo en Tiempo Real</h2>
+  <div id="reader"></div>
+  <div id="result">Resultado: <span id="output">Esperando escaneo...</span></div>
+
+  <script>
+    const output = document.getElementById('output');
+
+    // Crea una instancia del escáner
+    const html5QrCode = new Html5Qrcode("reader");
+
+    // Obtener la cámara trasera (si existe)
+    Html5Qrcode.getCameras().then(devices => {
+      if (devices && devices.length) {
+        const cameraId = devices[0].id;
+
+        html5QrCode.start(
+          cameraId,
+          {
+            fps: 10,    // cuadros por segundo
+            qrbox: { width: 250, height: 250 } // área de escaneo
+          },
+          qrCodeMessage => {
+            output.textContent = qrCodeMessage;
+            console.log("Código leído:", qrCodeMessage);
+
+            // Si quieres detener después de escanear una vez:
+            html5QrCode.stop().then(() => {
+              console.log("Escaneo detenido.");
+            }).catch(err => console.error("Error al detener:", err));
+          },
+          errorMessage => {
+            // Puedes ignorar errores silenciosos para no saturar consola
+          }
+        ).catch(err => {
+          console.error("Error al iniciar cámara:", err);
+        });
+      }
+    }).catch(err => {
+      console.error("No se pudo acceder a la cámara:", err);
+    });
+  </script>
+
+</body>
+</html>
