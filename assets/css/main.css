@@ -7,37 +7,37 @@
 */
 
 /*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
+# Variables de Fuente y Color
+# Ayuda: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
-/* Fonts */
+/* Fuentes */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Colores Globales - Las siguientes variables de color se utilizan en todo el sitio web. Actualizarlas aquí cambiará el esquema de color de todo el sitio web */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff; /* Color de fondo para todo el sitio web, incluidas las secciones individuales */
+  --default-color: #272829; /* Color predeterminado utilizado para la mayoría del contenido de texto en todo el sitio web */
+  --heading-color: #45505b; /* Color para encabezados, subtítulos y títulos en todo el sitio web */
+  --accent-color: #ff6403; /* Color de acento que representa tu marca en el sitio web. Se utiliza para botones, enlaces y otros elementos que necesitan destacar */
+  --surface-color: #ffffff; /* El color de superficie se utiliza como fondo de elementos en caja dentro de las secciones, como tarjetas, cuadros de iconos u otros elementos que requieren una separación visual del fondo global. */
+  --contrast-color: #ffffff; /* Color de contraste para el texto, asegurando la legibilidad contra fondos de colores de acento, encabezado o predeterminados. */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Colores del Menú de Navegación - Las siguientes variables de color se utilizan específicamente para el menú de navegación. Están separadas de los colores globales para permitir más opciones de personalización */
 :root {
-  --nav-color: #45505b;  /* The default color of the main navmenu links */
-  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #45505b;  /* El color predeterminado de los enlaces del menú de navegación principal */
+  --nav-hover-color: #ff6403; /* Aplicado a los enlaces del menú de navegación principal cuando se pasa el cursor sobre ellos o están activos */
+  --nav-mobile-background-color: #ffffff; /* Utilizado como color de fondo para el menú de navegación móvil */
+  --nav-dropdown-background-color: #ffffff; /* Utilizado como color de fondo para los elementos desplegables que aparecen al pasar el cursor sobre los elementos de navegación principales */
+  --nav-dropdown-color: #212529; /* Utilizado para los enlaces de navegación de los elementos desplegables en el menú de navegación. */
+  --nav-dropdown-hover-color: #ff6403; /* Similar a --nav-hover-color, este color se aplica a los enlaces de navegación desplegables cuando se pasa el cursor sobre ellos. */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Preajustes de Color - Estas clases anulan los colores globales cuando se aplican a cualquier sección o elemento, proporcionando la reutilización del mismo esquema de color. */
 
 .light-background {
   --background-color: #f9f9f9;
@@ -52,13 +52,13 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
+/* Desplazamiento suave */
 :root {
   scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
-# General Styling & Shared Classes
+# Estilos Generales y Clases Compartidas
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
@@ -87,7 +87,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
+/* Mensajes del Formulario de Correo PHP
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
@@ -140,7 +140,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Header
+# Encabezado Global
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
@@ -203,7 +203,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
+# Menú de Navegación
 --------------------------------------------------------------*/
 .navmenu {
   padding: 0;
@@ -277,7 +277,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Footer
+# Pie de Página Global
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
@@ -304,11 +304,11 @@ h6 {
 }
 
 .footer .social-links {
-  margin: 0 0 30px 0;
+  margin: 0 0 50px 0;
 }
 
 .footer .social-links a {
-  font-size: 16px;
+  font-size: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -318,8 +318,8 @@ h6 {
   margin: 0 4px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   transition: 0.3s;
 }
 
@@ -339,7 +339,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader
+# Precargador
 --------------------------------------------------------------*/
 #preloader {
   position: fixed;
@@ -374,7 +374,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Scroll Top Button
+# Botón de Volver Arriba
 --------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
@@ -408,7 +408,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
+# Desactivar el retardo de la animación de AOS en dispositivos móviles
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
@@ -417,7 +417,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
+# Títulos de Página Globales y Migas de Pan
 --------------------------------------------------------------*/
 .page-title {
   --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
@@ -455,7 +455,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Sections
+# Secciones Globales
 --------------------------------------------------------------*/
 section,
 .section {
@@ -466,7 +466,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Global Section Titles
+# Títulos de Sección Globales
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
@@ -513,7 +513,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Sección de Héroe
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
@@ -592,7 +592,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# Sección Sobre Nosotros
 --------------------------------------------------------------*/
 .about .content h2 {
   font-weight: 700;
@@ -622,7 +622,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Stats Section
+# Sección de Estadísticas
 --------------------------------------------------------------*/
 .stats i {
   background-color: var(--accent-color);
@@ -661,7 +661,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
+# Sección de Habilidades
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -698,7 +698,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section
+# Sección de Resumen (CV)
 --------------------------------------------------------------*/
 .resume .resume-title {
   color: var(--heading-color);
@@ -757,7 +757,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
+# Sección de Portafolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
@@ -858,7 +858,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# Sección de Servicios
 --------------------------------------------------------------*/
 .services .service-item {
   background-color: var(--surface-color);
@@ -987,7 +987,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Testimonials Section
+# Sección de Testimonios
 --------------------------------------------------------------*/
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -1068,7 +1068,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Contact Section
+# Sección de Contacto
 --------------------------------------------------------------*/
 .contact .info-item+.info-item {
   margin-top: 40px;
@@ -1148,7 +1148,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details Section
+# Sección de Detalles del Portafolio
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
@@ -1323,7 +1323,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Service Details Section
+# Sección de Detalles del Servicio
 --------------------------------------------------------------*/
 .service-details .service-box {
   padding: 20px;
@@ -1452,8 +1452,8 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# Sección de Inicio (Starter)
 --------------------------------------------------------------*/
 .starter-section {
-  /* Add your styles here */
+  /* Agrega tus estilos aquí */
 }
