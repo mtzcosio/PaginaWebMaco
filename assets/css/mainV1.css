@@ -987,6 +987,42 @@ section,
   fill: #f3268c;
 }
 
+.services .service-item.item-yellow i {
+  color: #ffc107;
+}
+
+.services .service-item.item-yellow:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-yellow:hover .icon path {
+  fill: #ffc107;
+}
+
+.services .service-item.item-green i {
+  color: #198754;
+}
+
+.services .service-item.item-green:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-green:hover .icon path {
+  fill: #198754;
+}
+
+.services .service-item.item-blue i {
+  color: #0d6efd;
+}
+
+.services .service-item.item-blue:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-blue:hover .icon path {
+  fill: #0d6efd;
+}
+
 /*--------------------------------------------------------------
 # Sección de Testimonios
 --------------------------------------------------------------*/
