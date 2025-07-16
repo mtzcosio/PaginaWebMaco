@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cotiza Impermeabilización - Servicios MACO</title>
+  <meta content="Solicita una cotización gratuita para impermeabilizar tu hogar o negocio. Expertos en impermeabilizaciones con los mejores materiales y precios." name="description">
+  <meta content="cotización impermeabilización, impermeabilizaciones, precio impermeabilizante, impermeabilizar, MACO construcción" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/MacoFavicon.png" rel="icon">
+  <link href="assets/img/MacoFavicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/mainV1.css" rel="stylesheet">
+
+  <style>
+    #cotizacionForm .resume-title {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--accent-color);
+    }
+    #cotizacionForm .form-section {
+        margin-bottom: 2.5rem;
+    }
+    #cotizacionForm button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 12px 35px;
+        background-color: var(--accent-color);
+        border: none;
+        color: var(--contrast-color);
+        transition: background-color 0.3s;
+    }
+    #cotizacionForm button[type="submit"]:hover {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    }
+    .form-check-label {
+        margin-left: 0.5rem;
+    }
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Inicio</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>Sobre nosotros</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Servicios</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contacto</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Cotización de Impermeabilización</li>
+          </ol>
+        </nav>
+        <h1>Cotización Gratuita de Impermeabilización</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <section id="cotizacion-impermeabilizacion" class="section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Protege tu Inversión</h2>
+        <p>Solicita una cotización sin costo para impermeabilizar y proteger tu propiedad de las filtraciones y la humedad.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <form id="cotizacionForm" class="p-4" style="background-color: var(--surface-color); border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.1);">
+
+          <!-- 1. Datos de Contacto -->
+          <div class="form-section">
+            <h4 class="resume-title">1. Datos de Contacto del Cliente</h4>
+            <div class="row gy-4">
+              <div class="col-md-6"><input type="text" id="nombre" class="form-control" placeholder="Nombre completo" required></div>
+              <div class="col-md-6"><input type="tel" id="telefono" class="form-control" placeholder="Teléfono celular o WhatsApp" required></div>
+              <div class="col-md-12"><input type="email" id="email" class="form-control" placeholder="Correo electrónico (Opcional)"></div>
+            </div>
+          </div>
+
+          <!-- 2. Ubicación del Servicio -->
+          <div class="form-section">
+            <h4 class="resume-title">2. Ubicación del Servicio</h4>
+            <div class="row gy-4">
+              <div class="col-md-12"><input type="text" id="direccion" class="form-control" placeholder="Dirección del inmueble" required></div>
+              <div class="col-md-6"><input type="text" id="colonia" class="form-control" placeholder="Colonia y ciudad" required></div>
+              <div class="col-md-6">
+                <select id="tipo_inmueble" class="form-select" required>
+                  <option value="" disabled selected>Tipo de inmueble</option>
+                  <option value="Casa">Casa</option>
+                  <option value="Edificio">Edificio</option>
+                  <option value="Bodega">Bodega</option>
+                  <option value="Local comercial">Local comercial</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              <div class="col-md-12"><input type="text" id="piso_nivel" class="form-control" placeholder="Piso o nivel del techo (Ej. Planta baja, 3er piso, etc.)"></div>
+            </div>
+          </div>
+
+          <!-- 3. Datos Técnicos del Área a Impermeabilizar -->
+          <div class="form-section">
+            <h4 class="resume-title">3. Datos Técnicos del Área a Impermeabilizar</h4>
+            <div class="row gy-4">
+              <div class="col-md-6"><input type="number" id="superficie" class="form-control" placeholder="Superficie aproximada (en m²)" required></div>
+              <div class="col-md-6">
+                <label class="form-label">Estado actual del techo</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="estado_techo" id="estado_bueno" value="En buen estado" required>
+                  <label class="form-check-label" for="estado_bueno">En buen estado</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="estado_techo" id="estado_grietas" value="Con grietas o fisuras">
+                  <label class="form-check-label" for="estado_grietas">Con grietas o fisuras</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="estado_techo" id="estado_filtraciones" value="Filtraciones visibles">
+                  <label class="form-check-label" for="estado_filtraciones">Filtraciones visibles</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="estado_techo" id="estado_imper_danado" value="Con impermeabilizante anterior dañado">
+                  <label class="form-check-label" for="estado_imper_danado">Con impermeabilizante anterior dañado</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Tipo de superficie del techo</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Concreto" id="superficie_concreto">
+                  <label class="form-check-label" for="superficie_concreto">Concreto</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Lámina" id="superficie_lamina">
+                  <label class="form-check-label" for="superficie_lamina">Lámina</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Teja" id="superficie_teja">
+                  <label class="form-check-label" for="superficie_teja">Teja</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Asbesto" id="superficie_asbesto">
+                  <label class="form-check-label" for="superficie_asbesto">Asbesto</label>
+                </div>
+                <div class="col-md-12"><input type="text" id="superficie_otro" class="form-control" placeholder="Otro (especificar)"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="pendiente_techo" class="form-label">Pendiente del techo</label>
+                <select id="pendiente_techo" class="form-select" required>
+                  <option value="" disabled selected>Seleccionar...</option>
+                  <option value="Plana">Plana</option>
+                  <option value="Inclinada">Inclinada</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">¿Deseas retirar el impermeabilizante anterior?</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="retiro_impermeabilizante" id="retiro_si" value="Sí" required>
+                  <label class="form-check-label" for="retiro_si">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="retiro_impermeabilizante" id="retiro_no" value="No">
+                  <label class="form-check-label" for="retiro_no">No</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="retiro_impermeabilizante" id="retiro_no_se" value="No sé">
+                  <label class="form-check-label" for="retiro_no_se">No sé</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Preferencias del Servicio -->
+          <div class="form-section">
+            <h4 class="resume-title">4. Preferencias del Servicio</h4>
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <label for="tipo_impermeabilizante" class="form-label">Tipo de impermeabilizante deseado (si lo sabes)</label>
+                <select id="tipo_impermeabilizante" class="form-select">
+                  <option value="" disabled selected>Seleccionar...</option>
+                  <option value="Acrílico">Acrílico</option>
+                  <option value="Prefabricado">Prefabricado</option>
+                  <option value="Poliuretano">Poliuretano</option>
+                  <option value="No estoy seguro">No estoy seguro</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">¿Quieres incluir limpieza y sellado previo?</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="limpieza_sellado" id="limpieza_si" value="Sí" required>
+                  <label class="form-check-label" for="limpieza_si">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="limpieza_sellado" id="limpieza_no" value="No">
+                  <label class="form-check-label" for="limpieza_no">No</label>
+                </div>
+              </div>
+              <div class="col-md-6"><label for="fecha_tentativa" class="form-label">Fecha tentativa para el servicio</label><input type="date" id="fecha_tentativa" class="form-control"></div>
+            </div>
+          </div>
+
+          <!-- 5. Comentarios Adicionales -->
+          <div class="form-section">
+            <h4 class="resume-title">5. Comentarios Adicionales</h4>
+            <div class="row">
+              <div class="col-md-12"><textarea id="comentarios" class="form-control" rows="4" placeholder="Añade aquí cualquier aclaración o detalle importante..."></textarea></div>
+            </div>
+          </div>
+
+          <!-- 6. Subir fotos del techo (Opcional)
+          <div class="form-section">
+            <h4 class="resume-title">6. (Opcional) Subir fotos del techo</h4>
+            <div class="row">
+              <div class="col-md-12">
+                  <label for="fotos_techo" class="form-label">Para evaluar el estado real y hacer una mejor cotización.</label>
+                  <input class="form-control" type="file" id="fotos_techo" multiple accept="image/*">
+                  <div id="file-help" class="form-text">No podemos enviar las imágenes por este medio, pero nos ayuda a saber que las tienes listas para enviarlas por WhatsApp.</div>
+              </div>
+            </div>
+          </div>
+           -->
+
+          <div class="col-md-12 text-center">
+            <button type="submit"><i class="bi bi-whatsapp"></i> Solicitar Cotización por WhatsApp</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Servicios MACO</h3>
+      <p>Comprometidos con la calidad y la satisfacción del cliente en cada proyecto. Contáctanos para hacer realidad tus ideas.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/MantenimientoyConstruccionMACO"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/servmaco/"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/5534994823?text=Hola,%20vi%20su%20p%C3%A1gina%20en%20https://servicios-maco.com%20y%20me%20interesa%20recibir%20una%20cotizaci%C3%B3n%20para%20un%20proyecto.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%20o%20agendar%20una%20visita?" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1">Servicios MACO</strong> <span>Todos los derechos reservados</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by <a href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Form Logic -->
+  <script>
+    document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const getRadioValue = (name) => document.querySelector(`input[name="${name}"]:checked`)?.value || 'No especificado';
+      const getCheckboxValues = (ids, otroId) => {
+        const values = ids.map(id => document.getElementById(id).checked ? document.getElementById(id).value : null).filter(Boolean);
+        const otroValor = document.getElementById(otroId).value;
+        if (otroValor) values.push(`Otro: ${otroValor}`);
+        return values.length > 0 ? values.join(', ') : 'Ninguno seleccionado';
+      };
+
+      let cotizacionText = `*SOLICITUD DE COTIZACIÓN DE IMPERMEABILIZACIÓN*\n\n` +
+        `*1. Datos de Contacto:*\n` +
+        ` - Nombre: ${document.getElementById('nombre').value}\n` +
+        ` - Teléfono: ${document.getElementById('telefono').value}\n` +
+        (document.getElementById('email').value ? ` - Email: ${document.getElementById('email').value}\n` : '') +
+        `\n*2. Ubicación del Servicio:*\n` +
+        ` - Dirección: ${document.getElementById('direccion').value}\n` +
+        ` - Colonia/Ciudad: ${document.getElementById('colonia').value}\n` +
+        ` - Tipo de Inmueble: ${document.getElementById('tipo_inmueble').value}\n` +
+        ` - Piso/Nivel: ${document.getElementById('piso_nivel').value || 'No especificado'}\n` +
+        `\n*3. Datos Técnicos del Área:*\n` +
+        ` - Superficie Aprox: ${document.getElementById('superficie').value} m²\n` +
+        ` - Estado Actual del Techo: ${getRadioValue('estado_techo')}\n` +
+        ` - Tipo de Superficie: ${getCheckboxValues(['superficie_concreto', 'superficie_lamina', 'superficie_teja', 'superficie_asbesto'], 'superficie_otro')}\n` +
+        ` - Pendiente del Techo: ${document.getElementById('pendiente_techo').value}\n` +
+        ` - Retirar Impermeabilizante Anterior: ${getRadioValue('retiro_impermeabilizante')}\n` +
+        `\n*4. Preferencias del Servicio:*\n` +
+        ` - Tipo de Impermeabilizante: ${document.getElementById('tipo_impermeabilizante').value || 'No estoy seguro'}\n` +
+        ` - Incluir Limpieza y Sellado: ${getRadioValue('limpieza_sellado')}\n` +
+        (document.getElementById('fecha_tentativa').value ? ` - Fecha Tentativa: ${document.getElementById('fecha_tentativa').value}\n` : '') +
+        (document.getElementById('comentarios').value ? `\n*5. Comentarios Adicionales:*\n${document.getElementById('comentarios').value}\n` : '') +
+        /*(document.getElementById('fotos_techo').files.length > 0 ? `\n*Adicional:* El cliente indica que tiene fotos para compartir.\n` : '') +*/
+        `\nEste mensaje fue generado desde la página de cotizaciones de impermeabilización.`;
+
+      const whatsappURL = `https://wa.me/525548019358?text=${encodeURIComponent(cotizacionText)}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+
+
+</body>
+</html>
