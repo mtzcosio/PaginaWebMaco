@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cotiza Aluminio - Servicios MACO</title>
+  <meta content="Cotiza gratis y sin compromiso tus ventanas y canceles de aluminio a medida. En Servicios MACO te ofrecemos calidad, precio y servicio." name="description">
+  <meta content="cotización aluminio, ventanas de aluminio, canceles de aluminio, precio ventanas, cotizar canceles, MACO construcción" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/MacoFavicon.png" rel="icon">
+  <link href="assets/img/MacoFavicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/mainV1.css" rel="stylesheet">
+
+  <style>
+    .item-row {
+        padding: 1.5rem;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        margin-bottom: 1.25rem;
+        background-color: var(--background-color);
+        box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        position: relative;
+    }
+    .btn-remove {
+        background-color: #e63946;
+        color: white;
+        border: none;
+        padding: 0.375rem 0.75rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .btn-remove:hover {
+        background-color: #d62828;
+    }
+    .btn-add {
+        background-color: var(--accent-color);
+        border: none;
+        transition: background-color 0.3s;
+    }
+    .btn-add:hover {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    }
+    #cotizacionForm button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 12px 35px;
+    }
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Inicio</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>Sobre nosotros</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Servicios</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contacto</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Cotización de Aluminio</li>
+          </ol>
+        </nav>
+        <h1>Cotización Gratuita de Aluminio</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Starter Section Section -->
+    <section id="cotizacion-aluminio" class="section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Ventanas y Canceles a tu Medida</h2>
+        <p>Completa el formulario para recibir una cotización detallada sin compromiso. ¡Es rápido, fácil y totalmente gratis!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <form id="cotizacionForm" class="p-4" style="background-color: var(--surface-color); border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.1);">
+
+          <h4 class="resume-title">1. Tus Datos de Contacto</h4>
+          <div class="row gy-4 mb-5">
+            <div class="col-md-6">
+              <label for="contact-name" class="form-label">Tu Nombre</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Ej: Juan Pérez" required>
+            </div>
+            <div class="col-md-6">
+              <label for="contact-phone" class="form-label">Tu Teléfono</label>
+              <input type="tel" id="contact-phone" class="form-control" placeholder="Ej: 5512345678" required>
+            </div>
+            <div class="col-md-12">
+              <label for="contact-email" class="form-label">Tu Email (Opcional)</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="Ej: juan.perez@email.com">
+            </div>
+          </div>
+
+          <h4 class="resume-title">2. Artículos a Cotizar</h4>
+          <br>
+          <div id="items-container">
+            <!-- Items to quote will be dynamically added here -->
+          </div>
+
+          <button type="button" id="addItemBtn" class="btn btn-add text-white mt-3"><i class="bi bi-plus-circle"></i> Agregar otro artículo</button>
+
+          <hr class="my-5">
+
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-add text-white"><i class="bi bi-whatsapp"></i> Generar Cotización por WhatsApp</button>
+          </div>
+        </form>
+
+      </div>
+
+    </section><!-- /Starter Section Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Servicios MACO</h3>
+      <p>Comprometidos con la calidad y la satisfacción del cliente en cada proyecto. Contáctanos para hacer realidad tus ideas.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/MantenimientoyConstruccionMACO"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/servmaco/"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/5548019358?text=Hola,%20vi%20su%20p%C3%A1gina%20en%20https://servicios-maco.com%20y%20me%20interesa%20recibir%20una%20cotizaci%C3%B3n%20para%20un%20proyecto.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%20o%20agendar%20una%20visita?" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1">Servicios MACO</strong> <span>Todos los derechos reservados</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by <a href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Form Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const itemsContainer = document.getElementById('items-container');
+        const addItemBtn = document.getElementById('addItemBtn');
+        const cotizacionForm = document.getElementById('cotizacionForm');
+        let itemCounter = 0;
+
+        const createItemRow = () => {
+            itemCounter++;
+            const itemRow = document.createElement('div');
+            itemRow.classList.add('item-row', 'row', 'gy-3', 'align-items-end');
+            itemRow.setAttribute('data-item-id', itemCounter);
+            
+            itemRow.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 text-secondary">Artículo #${itemCounter}</h5>
+                    ${itemCounter > 1 ? '<button type="button" class="btn-remove" data-remove-id="' + itemCounter + '"><i class="bi bi-trash"></i></button>' : ''}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <label for="modelo-${itemCounter}" class="form-label">Modelo</label>
+                    <select id="modelo-${itemCounter}" class="form-select" required>
+                        <option value="" disabled selected>Selecciona un modelo...</option>
+                        <option value="Ventana Corrediza">Ventana Corrediza</option>
+                        <option value="Ventana Fija">Ventana Fija</option>
+                        <option value="Ventana Abatible">Ventana Abatible</option>
+                        <option value="Ventana de Proyección">Ventana de Proyección</option>
+                        <option value="Cancel de Baño">Cancel de Baño</option>
+                    </select>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <label for="cantidad-${itemCounter}" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad-${itemCounter}" placeholder="Ej: 1" min="1" required>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="ancho-${itemCounter}" class="form-label">Ancho (cm)</label>
+                    <input type="number" class="form-control" id="ancho-${itemCounter}" placeholder="Ej: 120" step="any" required>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="alto-${itemCounter}" class="form-label">Alto (cm)</label>
+                    <input type="number" class="form-control" id="alto-${itemCounter}" placeholder="Ej: 150" step="any" required>
+                </div>
+            `;
+            itemsContainer.appendChild(itemRow);
+        };
+
+        createItemRow();
+
+        addItemBtn.addEventListener('click', createItemRow);
+
+        itemsContainer.addEventListener('click', function(e) {
+            const removeButton = e.target.closest('.btn-remove');
+            if (removeButton) {
+                const itemId = removeButton.getAttribute('data-remove-id');
+                const itemToRemove = document.querySelector(`.item-row[data-item-id="${itemId}"]`);
+                if (itemToRemove) {
+                    itemToRemove.remove();
+                }
+            }
+        });
+
+        cotizacionForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('contact-name').value;
+            const telefono = document.getElementById('contact-phone').value;
+            const email = document.getElementById('contact-email').value;
+
+            let cotizacionText = `*COTIZACIÓN DE ALUMINIO*\n\n`;
+            cotizacionText += `*Datos de Contacto:*\n`;
+            cotizacionText += `Nombre: ${nombre}\n`;
+            cotizacionText += `Teléfono: ${telefono}\n`;
+            if (email) {
+                cotizacionText += `Email: ${email}\n`;
+            }
+            cotizacionText += `\n*Artículos a Cotizar:*\n`;
+            
+            const itemRows = itemsContainer.querySelectorAll('.item-row');
+            itemRows.forEach((row, index) => {
+                const id = row.getAttribute('data-item-id');
+                const modelo = row.querySelector(`#modelo-${id}`).value;
+                const cantidad = row.querySelector(`#cantidad-${id}`).value;
+                const ancho = row.querySelector(`#ancho-${id}`).value;
+                const alto = row.querySelector(`#alto-${id}`).value;
+
+                cotizacionText += `----------------------\n`;
+                cotizacionText += `*Artículo ${index + 1}:*\n`;
+                cotizacionText += `- Modelo: ${modelo}\n`;
+                cotizacionText += `- Cantidad: ${cantidad}\n`;
+                cotizacionText += `- Medidas: ${ancho}cm (ancho) x ${alto}cm (alto)\n`;
+            });
+            
+            cotizacionText += `\nEste mensaje fue generado desde la página de cotizaciones.`;
+
+            const whatsappURL = `https://wa.me/525548019358?text=${encodeURIComponent(cotizacionText)}`;
+            window.open(whatsappURL, '_blank');
+        });
+    });
+  </script>
+
+</body>
+
+</html>
