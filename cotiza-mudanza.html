@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cotiza tu Mudanza - Servicios MACO</title>
+  <meta content="Cotiza tu mudanza de forma gratuita y sin compromiso. Servicio profesional para casas, departamentos y oficinas. Empaque y armado de muebles." name="description">
+  <meta content="cotización mudanza, mudanzas, fletes, servicio de mudanza, empaque, MACO construcción" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/MacoFavicon.png" rel="icon">
+  <link href="assets/img/MacoFavicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/mainV1.css" rel="stylesheet">
+
+  <style>
+    #cotizacionForm .resume-title {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--accent-color);
+    }
+    #cotizacionForm .form-section {
+        margin-bottom: 2.5rem;
+    }
+    #cotizacionForm button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 12px 35px;
+        background-color: var(--accent-color);
+        border: none;
+        color: var(--contrast-color);
+        transition: background-color 0.3s;
+    }
+    #cotizacionForm button[type="submit"]:hover {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    }
+    .form-check-label {
+        margin-left: 0.5rem;
+    }
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Inicio</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>Sobre nosotros</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Servicios</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contacto</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Cotización de Mudanza</li>
+          </ol>
+        </nav>
+        <h1>Cotización Gratuita de Mudanza</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <section id="cotizacion-mudanza" class="section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tu Mudanza, Simple y Segura</h2>
+        <p>Proporciónanos los detalles de tu mudanza y te enviaremos una cotización personalizada a la brevedad.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <form id="cotizacionForm" class="p-4" style="background-color: var(--surface-color); border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.1);">
+
+          <!-- 1. Datos de Contacto -->
+          <div class="form-section">
+            <h4 class="resume-title">1. Datos de Contacto</h4>
+            <div class="row gy-4">
+              <div class="col-md-6"><input type="text" id="nombre" class="form-control" placeholder="Nombre completo" required></div>
+              <div class="col-md-6"><input type="tel" id="telefono" class="form-control" placeholder="Teléfono celular o WhatsApp" required></div>
+              <div class="col-md-12"><input type="email" id="email" class="form-control" placeholder="Correo electrónico (Opcional)"></div>
+            </div>
+          </div>
+
+          <!-- 2. Dirección de Origen -->
+          <div class="form-section">
+            <h4 class="resume-title">2. Dirección de Origen</h4>
+            <div class="row gy-4">
+              <div class="col-md-12"><input type="text" id="calle_origen" class="form-control" placeholder="Calle y número" required></div>
+              <div class="col-md-6"><input type="text" id="colonia_origen" class="form-control" placeholder="Colonia o barrio" required></div>
+              <div class="col-md-6"><input type="text" id="ciudad_origen" class="form-control" placeholder="Ciudad y estado" required></div>
+              <div class="col-md-4">
+                  <select id="vivienda_origen" class="form-select" required>
+                      <option value="" disabled selected>Tipo de vivienda...</option>
+                      <option value="Casa">Casa</option>
+                      <option value="Departamento">Departamento</option>
+                      <option value="Oficina">Oficina</option>
+                      <option value="Otro">Otro</option>
+                  </select>
+              </div>
+              <div class="col-md-4"><input type="text" id="piso_origen" class="form-control" placeholder="Piso o nivel"></div>
+              <div class="col-md-4 d-flex align-items-center">
+                <label class="form-label me-3 mb-0">¿Elevador?</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="elevador_origen" id="elevador_origen_si" value="Sí" required><label class="form-check-label" for="elevador_origen_si">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="elevador_origen" id="elevador_origen_no" value="No"><label class="form-check-label" for="elevador_origen_no">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Dirección de Destino -->
+          <div class="form-section">
+            <h4 class="resume-title">3. Dirección de Destino</h4>
+            <div class="row gy-4">
+                <div class="col-md-12"><input type="text" id="calle_destino" class="form-control" placeholder="Calle y número" required></div>
+                <div class="col-md-6"><input type="text" id="colonia_destino" class="form-control" placeholder="Colonia o barrio" required></div>
+                <div class="col-md-6"><input type="text" id="ciudad_destino" class="form-control" placeholder="Ciudad y estado" required></div>
+                <div class="col-md-4">
+                    <select id="vivienda_destino" class="form-select" required>
+                        <option value="" disabled selected>Tipo de vivienda...</option>
+                        <option value="Casa">Casa</option>
+                        <option value="Departamento">Departamento</option>
+                        <option value="Oficina">Oficina</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="col-md-4"><input type="text" id="piso_destino" class="form-control" placeholder="Piso o nivel"></div>
+                <div class="col-md-4 d-flex align-items-center">
+                    <label class="form-label me-3 mb-0">¿Elevador?</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="elevador_destino" id="elevador_destino_si" value="Sí" required><label class="form-check-label" for="elevador_destino_si">Sí</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="elevador_destino" id="elevador_destino_no" value="No"><label class="form-check-label" for="elevador_destino_no">No</label>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- 4. Detalles de la Mudanza -->
+          <div class="form-section">
+              <h4 class="resume-title">4. Detalles de la Mudanza</h4>
+              <div class="row gy-4">
+                  <div class="col-md-6"><label for="fecha" class="form-label">Fecha tentativa</label><input type="date" id="fecha" class="form-control" required></div>
+                  <div class="col-md-6"><label for="horario" class="form-label">Horario preferido</label><select id="horario" class="form-select" required><option value="Sin preferencia" selected>Sin preferencia</option><option value="Mañana">Mañana</option><option value="Tarde">Tarde</option></select></div>
+                  <div class="col-md-12">
+                      <label class="form-label">¿Qué tipo de objetos se van a trasladar?</label>
+                      <div class="d-flex flex-wrap">
+                          <div class="form-check me-3 mb-2"><input class="form-check-input" type="checkbox" value="Sala" id="obj_sala"><label class="form-check-label" for="obj_sala">Sala</label></div>
+                          <div class="form-check me-3 mb-2"><input class="form-check-input" type="checkbox" value="Comedor" id="obj_comedor"><label class="form-check-label" for="obj_comedor">Comedor</label></div>
+                          <div class="form-check me-3 mb-2"><input class="form-check-input" type="checkbox" value="Recámara(s)" id="obj_recamara"><label class="form-check-label" for="obj_recamara">Recámara(s)</label></div>
+                          <div class="form-check me-3 mb-2"><input class="form-check-input" type="checkbox" value="Electrodomésticos" id="obj_electro"><label class="form-check-label" for="obj_electro">Electrodomésticos</label></div>
+                          <div class="form-check me-3 mb-2"><input class="form-check-input" type="checkbox" value="Cajoneras/Archiveros" id="obj_cajoneras"><label class="form-check-label" for="obj_cajoneras">Cajoneras / archiveros</label></div>
+                          <div class="form-check me-3 mb-2"><input class="form-check-input" type="checkbox" value="Equipo de oficina" id="obj_oficina"><label class="form-check-label" for="obj_oficina">Equipo de oficina</label></div>
+                      </div>
+                  </div>
+                  <div class="col-md-6"><input type="text" id="obj_otros" class="form-control" placeholder="Otros objetos (opcional)"></div>
+                  <div class="col-md-6"><input type="text" id="cantidad_muebles" class="form-control" placeholder="Cantidad aproximada de muebles o cajas" required></div>
+                  <div class="col-md-4 d-flex align-items-center"><label class="form-label me-3 mb-0">¿Armado/desarmado?</label><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="armado" id="armado_si" value="Sí" required><label class="form-check-label" for="armado_si">Sí</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="armado" id="armado_no" value="No"><label class="form-check-label" for="armado_no">No</label></div></div>
+                  <div class="col-md-4 d-flex align-items-center"><label class="form-label me-3 mb-0">¿Empaque frágil?</label><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="empaque" id="empaque_si" value="Sí" required><label class="form-check-label" for="empaque_si">Sí</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="empaque" id="empaque_no" value="No"><label class="form-check-label" for="empaque_no">No</label></div></div>
+                  <div class="col-md-4 d-flex align-items-center"><label class="form-label me-3 mb-0">¿Seguro?</label><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="seguro" id="seguro_si" value="Sí" required><label class="form-check-label" for="seguro_si">Sí</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="seguro" id="seguro_no" value="No"><label class="form-check-label" for="seguro_no">No</label></div></div>
+              </div>
+          </div>
+
+          <!-- 5. Comentarios Adicionales -->
+          <div class="form-section">
+            <h4 class="resume-title">5. Comentarios Adicionales</h4>
+            <div class="row">
+              <div class="col-md-12"><textarea id="comentarios" class="form-control" rows="4" placeholder="Añade aquí cualquier aclaración o detalle importante..."></textarea></div>
+            </div>
+          </div>
+
+          <div class="col-md-12 text-center">
+            <button type="submit"><i class="bi bi-whatsapp"></i> Solicitar Cotización por WhatsApp</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Servicios MACO</h3>
+      <p>Comprometidos con la calidad y la satisfacción del cliente en cada proyecto. Contáctanos para hacer realidad tus ideas.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/MantenimientoyConstruccionMACO"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/servmaco/"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/5548019358?text=Hola,%20vi%20su%20p%C3%A1gina%20en%20https://servicios-maco.com%20y%20me%20interesa%20recibir%20una%20cotizaci%C3%B3n%20para%20un%20proyecto.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%20o%20agendar%20una%20visita?" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1">Servicios MACO</strong> <span>Todos los derechos reservados</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by <a href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Form Logic -->
+  <script>
+    document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Helper para obtener valor de radio buttons
+        const getRadioValue = (name) => {
+            const radio = document.querySelector(`input[name="${name}"]:checked`);
+            return radio ? radio.value : 'No especificado';
+        };
+
+        // Helper para obtener valores de checkboxes
+        const getCheckboxValues = () => {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            const values = [];
+            checkboxes.forEach((checkbox) => {
+                values.push(checkbox.value);
+            });
+            return values.length > 0 ? values.join(', ') : 'Ninguno';
+        };
+        
+        let cotizacionText = `*SOLICITUD DE COTIZACIÓN DE MUDANZA*\n\n`;
+
+        // 1. Datos de Contacto
+        cotizacionText += `*1. Datos de Contacto:*\n`;
+        cotizacionText += ` - Nombre: ${document.getElementById('nombre').value}\n`;
+        cotizacionText += ` - Teléfono: ${document.getElementById('telefono').value}\n`;
+        const email = document.getElementById('email').value;
+        if (email) cotizacionText += ` - Email: ${email}\n`;
+        
+        // 2. Dirección de Origen
+        cotizacionText += `\n*2. Dirección de Origen:*\n`;
+        cotizacionText += ` - Dirección: ${document.getElementById('calle_origen').value}, ${document.getElementById('colonia_origen').value}, ${document.getElementById('ciudad_origen').value}\n`;
+        cotizacionText += ` - Vivienda: ${document.getElementById('vivienda_origen').value}\n`;
+        cotizacionText += ` - Piso: ${document.getElementById('piso_origen').value || 'No especificado'}\n`;
+        cotizacionText += ` - Elevador: ${getRadioValue('elevador_origen')}\n`;
+        
+        // 3. Dirección de Destino
+        cotizacionText += `\n*3. Dirección de Destino:*\n`;
+        cotizacionText += ` - Dirección: ${document.getElementById('calle_destino').value}, ${document.getElementById('colonia_destino').value}, ${document.getElementById('ciudad_destino').value}\n`;
+        cotizacionText += ` - Vivienda: ${document.getElementById('vivienda_destino').value}\n`;
+        cotizacionText += ` - Piso: ${document.getElementById('piso_destino').value || 'No especificado'}\n`;
+        cotizacionText += ` - Elevador: ${getRadioValue('elevador_destino')}\n`;
+        
+        // 4. Detalles de la Mudanza
+        cotizacionText += `\n*4. Detalles de la Mudanza:*\n`;
+        cotizacionText += ` - Fecha Tentativa: ${document.getElementById('fecha').value}\n`;
+        cotizacionText += ` - Horario Preferido: ${document.getElementById('horario').value}\n`;
+        cotizacionText += ` - Objetos a trasladar: ${getCheckboxValues()}\n`;
+        const otrosObjetos = document.getElementById('obj_otros').value;
+        if (otrosObjetos) cotizacionText += ` - Otros objetos: ${otrosObjetos}\n`;
+        cotizacionText += ` - Cantidad Aprox. Muebles/Cajas: ${document.getElementById('cantidad_muebles').value}\n`;
+        cotizacionText += ` - Requiere Armado/Desarmado: ${getRadioValue('armado')}\n`;
+        cotizacionText += ` - Requiere Empaque Frágil: ${getRadioValue('empaque')}\n`;
+        cotizacionText += ` - Requiere Seguro: ${getRadioValue('seguro')}\n`;
+        
+        // 5. Comentarios Adicionales
+        const comentarios = document.getElementById('comentarios').value;
+        if (comentarios) {
+            cotizacionText += `\n*5. Comentarios Adicionales:*\n${comentarios}\n`;
+        }
+
+        cotizacionText += `\nEste mensaje fue generado desde la página de cotizaciones de mudanza.`;
+
+        const whatsappURL = `https://wa.me/525548019358?text=${encodeURIComponent(cotizacionText)}`;
+        window.open(whatsappURL, '_blank');
+    });
+  </script>
+
+</body>
+
+</html>
