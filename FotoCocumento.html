@@ -11,7 +11,7 @@
       text-align: center;
       margin: 0;
       padding: 0;
-    }
+    }    
 
     h2 {
       margin: 20px 0;
@@ -37,11 +37,11 @@
       width: 80%;
       height: 40%;
       transform: translate(-50%, -50%);
-      border: 1px  white;
+      border: 2px dashed rgba(255,255,255,0.7); /* Línea punteada */
       border-radius: 10px;
       box-shadow: 0 0 5px 2px rgba(255,255,255,0.6);
       pointer-events: none; /* Permite hacer clic en el botón */
-    }
+    }    
 
     button {
       margin-top: 15px;
@@ -52,40 +52,68 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
-    }
+      transition: background-color 0.3s ease;
+    }    
 
-    button:hover {
-      background-color: #0056b3;
+    button:hover {      
+      background-color: #0056b3;      
     }
 
     canvas, img {
       display: block;
       margin: 20px auto;
       max-width: 90%;
-      border: 2px solid #444;
+      border: 2px solid #ccc;
       border-radius: 8px;
     }
 
     #downloadLink {
       display: none;
       margin-bottom: 20px;
-      text-decoration: none;
       color: white;
       background: green;
       padding: 10px 20px;
       border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }    
+
+    #downloadLink:hover {
+      background: #218838;
     }
+
+    /* Nuevos estilos para mensajes de estado */
+    #statusMessage {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    #statusMessage.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    #statusMessage.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
   </style>
 </head>
 <body>
   <h2>Captura tu INE</h2>
 
   <div class="camera-container">
-    <video id="video" autoplay></video>
+    <video id="video" autoplay playsinline></video> <!-- 'playsinline' para mejor experiencia en móviles -->
     <div class="frame-guide"></div> <!-- Recuadro guía -->
   </div>
 
   <button id="capture">Tomar Foto</button>
+  <div id="statusMessage"></div> <!-- Mensajes de estado -->
 
   <canvas id="canvas" style="display:none;"></canvas>
   <img id="photo" alt="Foto de INE" />
@@ -97,17 +125,27 @@
     const photo = document.getElementById('photo');
     const captureButton = document.getElementById('capture');
     const downloadLink = document.getElementById('downloadLink');
+    const statusMessage = document.getElementById('statusMessage');
+
+    function showStatus(message, type = 'success') {
+      statusMessage.textContent = message;
+      statusMessage.className = type;
+      statusMessage.style.display = 'block';
+    }
+
+    function hideStatus() {
+      statusMessage.style.display = 'none';
+    }
 
     // Acceder a la cámara
-    navigator.mediaDevices.getUserMedia({ video: true })
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
       .then((stream) => {
         video.srcObject = stream;
       })
-      .catch((err) => {
-        alert('No se pudo acceder a la cámara: ' + err);
+      .catch((err) => {        
+        showStatus('Error al acceder a la cámara: ' + err, 'error');
       });
 
-    // Capturar foto
     captureButton.addEventListener('click', () => {
       canvas.width = video.videoWidth;
       canvas.height = video.videoHeight;
@@ -117,6 +155,7 @@
       photo.src = dataUrl;
       downloadLink.href = dataUrl;
       downloadLink.style.display = 'inline-block';
+      showStatus('Foto capturada. ¡Puedes descargarla!', 'success');
     });
   </script>
 </body>
