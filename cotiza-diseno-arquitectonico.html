@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cotiza Diseño Arquitectónico - Servicios MACO</title>
+  <meta content="Solicita una cotización rápida para tu proyecto de diseño arquitectónico. Casas, departamentos, negocios y más. Expertos a tu disposición." name="description">
+  <meta content="cotización diseño arquitectónico, diseño arquitectónico, planos arquitectónicos, renders 3d, permisos construcción, MACO construcción" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/MacoFavicon.png" rel="icon">
+  <link href="assets/img/MacoFavicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/mainV1.css" rel="stylesheet">
+
+  <style>
+    #cotizacionForm .resume-title {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--accent-color);
+    }
+    #cotizacionForm .form-section {
+        margin-bottom: 2.5rem;
+    }
+    #cotizacionForm button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 12px 35px;
+        background-color: var(--accent-color);
+        border: none;
+        color: var(--contrast-color);
+        transition: background-color 0.3s;
+    }
+    #cotizacionForm button[type="submit"]:hover {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    }
+    .form-check-label {
+        margin-left: 0.5rem;
+    }
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Inicio</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>Sobre nosotros</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Servicios</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contacto</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Cotización de Diseño Arquitectónico</li>
+          </ol>
+        </nav>
+        <h1>Cotización Rápida de Diseño Arquitectónico</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <section id="cotizacion-diseno" class="section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Dale Vida a tu Proyecto</h2>
+        <p>Completa este formulario y obtén una cotización a la medida para el diseño de tu espacio ideal.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <form id="cotizacionForm" class="p-4" style="background-color: var(--surface-color); border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.1);">
+
+          <!-- 1. Datos de Contacto -->
+          <div class="form-section">
+            <h4 class="resume-title">1. Datos de Contacto</h4>
+            <div class="row gy-4">
+              <div class="col-md-6"><input type="text" id="nombre" class="form-control" placeholder="Nombre completo" required></div>
+              <div class="col-md-6"><input type="tel" id="telefono" class="form-control" placeholder="Teléfono o WhatsApp" required></div>
+              <div class="col-md-12"><input type="email" id="email" class="form-control" placeholder="Correo electrónico (Opcional)"></div>
+            </div>
+          </div>
+
+          <!-- 2. Información del Proyecto -->
+          <div class="form-section">
+            <h4 class="resume-title">2. Información del Proyecto</h4>
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Tipo de proyecto:</label>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_proyecto" id="tipo_casa" value="Casa" required><label class="form-check-label" for="tipo_casa">Casa</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_proyecto" id="tipo_depto" value="Departamento"><label class="form-check-label" for="tipo_depto">Departamento</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_proyecto" id="tipo_negocio" value="Negocio"><label class="form-check-label" for="tipo_negocio">Negocio</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_proyecto" id="tipo_otro_radio" value="Otro"><label class="form-check-label" for="tipo_otro_radio">Otro:</label></div>
+                <input type="text" id="tipo_otro_texto" class="form-control mt-2" placeholder="Especificar otro">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">¿Qué necesitas?</label>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Planos arquitectónicos" id="nec_planos"><label class="form-check-label" for="nec_planos">Planos arquitectónicos</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Renders 3D" id="nec_renders"><label class="form-check-label" for="nec_renders">Renders 3D</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Trámites o permisos" id="nec_tramites"><label class="form-check-label" for="nec_tramites">Trámites o permisos</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="nec_otro_check"><label class="form-check-label" for="nec_otro_check">Otro:</label></div>
+                <input type="text" id="nec_otro_texto" class="form-control mt-2" placeholder="Especificar otra necesidad">
+              </div>
+              <div class="col-md-12"><label for="ubicacion_terreno" class="form-label fw-bold">Ubicación del terreno:</label><input type="text" id="ubicacion_terreno" class="form-control" placeholder="Ciudad, Estado, o dirección si la tienes" required></div>
+              <div class="col-md-6"><label for="tamano_terreno" class="form-label fw-bold">Tamaño aproximado del terreno (en m²):</label><input type="number" id="tamano_terreno" class="form-control" placeholder="Ej: 200" required></div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">¿Ya tienes el terreno?</label>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="tiene_terreno" id="terreno_si" value="Sí" required><label class="form-check-label" for="terreno_si">Sí</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="tiene_terreno" id="terreno_no" value="No"><label class="form-check-label" for="terreno_no">No</label></div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Número de niveles que quieres construir:</label>
+                <div class="form-check"><input class="form-check-input" type="radio" name="niveles" id="niveles_1" value="1 nivel" required><label class="form-check-label" for="niveles_1">1 nivel</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="niveles" id="niveles_2" value="2 niveles"><label class="form-check-label" for="niveles_2">2 niveles</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="niveles" id="niveles_mas" value="Más de 2"><label class="form-check-label" for="niveles_mas">Más de 2</label></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Comentarios adicionales -->
+          <div class="form-section">
+            <h4 class="resume-title">3. Comentarios adicionales (opcional)</h4>
+            <textarea id="comentarios" class="form-control" rows="4" placeholder="Describe tu proyecto, ideas, o cualquier detalle que consideres importante..."></textarea>
+          </div>
+
+          <!-- 4. Preferencia de contacto -->
+          <div class="form-section">
+            <h4 class="resume-title">4. ¿Cómo prefieres que te contactemos?</h4>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="preferencia_contacto" id="contacto_whatsapp" value="WhatsApp" required><label class="form-check-label" for="contacto_whatsapp">WhatsApp</label></div>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="preferencia_contacto" id="contacto_correo" value="Correo electrónico"><label class="form-check-label" for="contacto_correo">Correo electrónico</label></div>
+          </div>
+
+          <!-- 5. Adjuntar archivo -->
+          <div class="form-section">
+            <h4 class="resume-title">5. Adjunta una imagen o croquis (opcional)</h4>
+            <label for="adjunto" class="form-label">Nos ayudará a entender mejor tu idea.</label>
+            <input class="form-control" type="file" id="adjunto" accept="image/*,application/pdf">
+            <div class="form-text">No enviaremos el archivo, solo nos notifica que tienes uno para compartir por WhatsApp.</div>
+          </div>
+
+          <div class="col-md-12 text-center">
+            <button type="submit"><i class="bi bi-whatsapp"></i> Solicitar Cotización</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Servicios MACO</h3>
+      <p>Comprometidos con la calidad y la satisfacción del cliente en cada proyecto. Contáctanos para hacer realidad tus ideas.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/MantenimientoyConstruccionMACO"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/servmaco/"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/525548019358?text=Hola,%20vi%20su%20página%20y%20me%20interesa%20una%20cotización." target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1">Servicios MACO</strong> <span>Todos los derechos reservados</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by <a href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Form Logic -->
+  <script>
+    document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // --- Helper Functions ---
+      const getRadioValue = (name) => {
+        const radio = document.querySelector(`input[name="${name}"]:checked`);
+        if (radio && radio.value === 'Otro') {
+          const otroTexto = document.getElementById('tipo_otro_texto').value;
+          return `Otro: ${otroTexto || 'No especificado'}`;
+        }
+        return radio ? radio.value : 'No especificado';
+      };
+
+      const getCheckboxValues = () => {
+        const values = [];
+        if (document.getElementById('nec_planos').checked) values.push('Planos arquitectónicos');
+        if (document.getElementById('nec_renders').checked) values.push('Renders 3D');
+        if (document.getElementById('nec_tramites').checked) values.push('Trámites o permisos');
+        if (document.getElementById('nec_otro_check').checked) {
+            const otroTexto = document.getElementById('nec_otro_texto').value;
+            values.push(`Otro: ${otroTexto || 'No especificado'}`);
+        }
+        return values.length > 0 ? values.join(', ') : 'Ninguna seleccionada';
+      };
+
+      // --- Build WhatsApp Message ---
+      let cotizacionText = `*SOLICITUD DE COTIZACIÓN DE DISEÑO ARQUITECTÓNICO*\n\n`+
+        `*1. Datos de Contacto:*\n` +
+        ` - Nombre: ${document.getElementById('nombre').value}\n` +
+        ` - Teléfono/WhatsApp: ${document.getElementById('telefono').value}\n` +
+        (document.getElementById('email').value ? ` - Correo: ${document.getElementById('email').value}\n` : '') +
+        `\n*2. Información del Proyecto:*\n` +
+        ` - Tipo de proyecto: ${getRadioValue('tipo_proyecto')}\n` +
+        ` - Ubicación: ${document.getElementById('ubicacion_terreno').value}\n` +
+        ` - ¿Tiene terreno?: ${document.querySelector('input[name="tiene_terreno"]:checked')?.value || 'No especificado'}\n` +
+        ` - Tamaño del terreno: ${document.getElementById('tamano_terreno').value} m²\n` +
+        ` - Niveles a construir: ${document.querySelector('input[name="niveles"]:checked')?.value || 'No especificado'}\n` +
+        ` - Necesidades: ${getCheckboxValues()}\n` +
+        `\n*3. Comentarios adicionales:*\n` +
+        `${document.getElementById('comentarios').value || 'Sin comentarios.'}\n` +
+        `\n*4. Preferencia de contacto:*\n` +
+        ` - ${document.querySelector('input[name="preferencia_contacto"]:checked')?.value || 'No especificado'}\n`;
+
+      if (document.getElementById('adjunto').files.length > 0) {
+        cotizacionText += `\n*5. Archivo adjunto:*\n - El cliente tiene una imagen/croquis para compartir.`;
+      }
+
+      // --- Open WhatsApp ---
+      const whatsappURL = `https://wa.me/525548019358?text=${encodeURIComponent(cotizacionText)}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+
+</body>
+</html>

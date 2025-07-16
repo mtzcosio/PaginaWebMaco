@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cotización Proyecto de Plomería - Servicios MACO</title>
+  <meta content="Cotiza tu proyecto de plomería. Instalaciones, reparaciones, mantenimiento y más. Servicio profesional y garantizado." name="description">
+  <meta content="cotización plomería, plomero, instalación de tuberías, reparación de fugas, mantenimiento de plomería, MACO construcción" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/MacoFavicon.png" rel="icon">
+  <link href="assets/img/MacoFavicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/mainV1.css" rel="stylesheet">
+
+  <style>
+    #cotizacionForm .resume-title {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--accent-color);
+    }
+    #cotizacionForm .form-section {
+        margin-bottom: 2.5rem;
+    }
+    #cotizacionForm button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 12px 35px;
+        background-color: var(--accent-color);
+        border: none;
+        color: var(--contrast-color);
+        transition: background-color 0.3s;
+    }
+    #cotizacionForm button[type="submit"]:hover {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    }
+    .form-check-label {
+        margin-left: 0.5rem;
+    }
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Inicio</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>Sobre nosotros</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Servicios</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contacto</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Cotización de Plomería</li>
+          </ol>
+        </nav>
+        <h1>Cotización de Proyecto de Plomería</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <section id="cotizacion-plomeria" class="section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Soluciones de Plomería a tu Medida</h2>
+        <p>Completa el formulario para recibir una cotización detallada para tu instalación, reparación o mantenimiento.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <form id="cotizacionForm" class="p-4" style="background-color: var(--surface-color); border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.1);">
+
+          <!-- 1. Datos de Contacto -->
+          <div class="form-section">
+            <h4 class="resume-title">1. Datos de Contacto</h4>
+            <div class="row gy-4">
+              <div class="col-md-6"><input type="text" id="nombre" class="form-control" placeholder="Nombre completo" required></div>
+              <div class="col-md-6"><input type="tel" id="telefono" class="form-control" placeholder="Teléfono o WhatsApp" required></div>
+              <div class="col-md-12"><input type="email" id="email" class="form-control" placeholder="Correo electrónico (Opcional)"></div>
+            </div>
+          </div>
+
+          <!-- 2. Información del Proyecto -->
+          <div class="form-section">
+            <h4 class="resume-title">2. Información del Proyecto</h4>
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Tipo de inmueble:</label>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_casa" value="Casa" required><label class="form-check-label" for="tipo_casa">Casa</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_depto" value="Departamento"><label class="form-check-label" for="tipo_depto">Departamento</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_oficina" value="Oficina"><label class="form-check-label" for="tipo_oficina">Oficina</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_local" value="Local comercial"><label class="form-check-label" for="tipo_local">Local comercial</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_otro_radio" value="Otro"><label class="form-check-label" for="tipo_otro_radio">Otro:</label></div>
+                <input type="text" id="tipo_otro_texto" class="form-control mt-2" placeholder="Especificar otro">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Tipo de trabajo:</label>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Instalación nueva" id="trab_instalacion"><label class="form-check-label" for="trab_instalacion">Instalación nueva</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Reparación o mantenimiento" id="trab_reparacion"><label class="form-check-label" for="trab_reparacion">Reparación o mantenimiento</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Reubicación de instalaciones" id="trab_reubicacion"><label class="form-check-label" for="trab_reubicacion">Reubicación de instalaciones</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="trab_otro_check"><label class="form-check-label" for="trab_otro_check">Otro:</label></div>
+                <input type="text" id="trab_otro_texto" class="form-control mt-2" placeholder="Especificar otro trabajo">
+              </div>
+              <div class="col-md-12"><label for="ubicacion_proyecto" class="form-label fw-bold">Ubicación del proyecto:</label><input type="text" id="ubicacion_proyecto" class="form-control" placeholder="Ciudad, Estado, o dirección" required></div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Área a trabajar:</label>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Cocina" id="area_cocina"><label class="form-check-label" for="area_cocina">Cocina</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Baño(s)" id="area_bano"><label class="form-check-label" for="area_bano">Baño(s)</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Lavadero" id="area_lavadero"><label class="form-check-label" for="area_lavadero">Lavadero</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Tinaco/Cisterna" id="area_tinaco"><label class="form-check-label" for="area_tinaco">Tinaco/Cisterna</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" value="Toda la instalación" id="area_toda"><label class="form-check-label" for="area_toda">Toda la instalación</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="area_otro_check"><label class="form-check-label" for="area_otro_check">Otro:</label></div>
+                <input type="text" id="area_otro_texto" class="form-control mt-2" placeholder="Especificar otra área">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">¿Hay planos o croquis disponibles?</label>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="planos" id="planos_si" value="Sí" required><label class="form-check-label" for="planos_si">Sí</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="planos" id="planos_no" value="No"><label class="form-check-label" for="planos_no">No</label></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Descripción -->
+          <div class="form-section">
+            <h4 class="resume-title">3. Descripción del problema o necesidad</h4>
+            <textarea id="descripcion" class="form-control" rows="4" placeholder="Por favor, describe con detalle el trabajo que necesitas. Ej: fuga en tubería de lavabo, instalación completa en baño nuevo, etc." required></textarea>
+          </div>
+
+          <!-- 4. Materiales -->
+          <div class="form-section">
+            <h4 class="resume-title">4. ¿Deseas incluir materiales en la cotización?</h4>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="materiales" id="mat_si" value="Sí" required><label class="form-check-label" for="mat_si">Sí</label></div>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="materiales" id="mat_no" value="No"><label class="form-check-label" for="mat_no">No</label></div>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="materiales" id="mat_ambas" value="Quiero ambas opciones"><label class="form-check-label" for="mat_ambas">Quiero ambas opciones</label></div>
+          </div>
+
+          <!-- 5. Adjuntar archivo -->
+          <div class="form-section">
+            <h4 class="resume-title">5. Adjuntar foto o plano (opcional)</h4>
+            <label for="adjunto" class="form-label">Una imagen de la falla o un plano nos ayudará a entender mejor el trabajo.</label>
+            <input class="form-control" type="file" id="adjunto" accept="image/*,application/pdf" multiple>
+            <div class="form-text">No enviaremos los archivos, solo nos notifica que tienes material para compartir por WhatsApp.</div>
+          </div>
+
+          <div class="col-md-12 text-center">
+            <button type="submit"><i class="bi bi-whatsapp"></i> Solicitar Cotización</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Servicios MACO</h3>
+      <p>Comprometidos con la calidad y la satisfacción del cliente en cada proyecto. Contáctanos para hacer realidad tus ideas.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/MantenimientoyConstruccionMACO"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/servmaco/"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/525548019358?text=Hola,%20vi%20su%20página%20y%20me%20interesa%20una%20cotización." target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1">Servicios MACO</strong> <span>Todos los derechos reservados</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by <a href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Form Logic -->
+  <script>
+    document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // --- Helper Functions ---
+      const getRadioValue = (name, otroTextFieldId) => {
+        const radio = document.querySelector(`input[name="${name}"]:checked`);
+        if (radio && radio.value === 'Otro') {
+          const otroTexto = document.getElementById(otroTextFieldId).value;
+          return `Otro: ${otroTexto || 'No especificado'}`;
+        }
+        return radio ? radio.value : 'No especificado';
+      };
+
+      const getCheckboxValues = (ids, otroCheckboxId, otroTextFieldId) => {
+          const values = [];
+          ids.forEach(id => {
+              if (document.getElementById(id).checked) {
+                  values.push(document.getElementById(id).value);
+              }
+          });
+          if (document.getElementById(otroCheckboxId) && document.getElementById(otroCheckboxId).checked) {
+              const otroTexto = document.getElementById(otroTextFieldId).value;
+              values.push(`Otro: ${otroTexto || 'No especificado'}`);
+          }
+          return values.length > 0 ? values.join(', ') : 'Ninguna seleccionada';
+      };
+
+      // --- Build WhatsApp Message ---
+      let cotizacionText = `*SOLICITUD DE COTIZACIÓN DE PLOMERÍA*\n\n`+
+        `*1. Datos de Contacto:*\n` +
+        ` - Nombre: ${document.getElementById('nombre').value}\n` +
+        ` - Teléfono/WhatsApp: ${document.getElementById('telefono').value}\n` +
+        (document.getElementById('email').value ? ` - Correo: ${document.getElementById('email').value}\n` : '') +
+        `\n*2. Información del Proyecto:*\n` +
+        ` - Tipo de inmueble: ${getRadioValue('tipo_inmueble', 'tipo_otro_texto')}\n` +
+        ` - Ubicación: ${document.getElementById('ubicacion_proyecto').value}\n` +
+        ` - Tipo de trabajo: ${getCheckboxValues(['trab_instalacion', 'trab_reparacion', 'trab_reubicacion'], 'trab_otro_check', 'trab_otro_texto')}\n` +
+        ` - Área a trabajar: ${getCheckboxValues(['area_cocina', 'area_bano', 'area_lavadero', 'area_tinaco', 'area_toda'], 'area_otro_check', 'area_otro_texto')}\n` +
+        ` - ¿Planos disponibles?: ${getRadioValue('planos')}\n`+
+        `\n*3. Descripción del problema/necesidad:*\n` +
+        `${document.getElementById('descripcion').value}\n`+
+        `\n*4. Inclusión de materiales:*\n` +
+        ` - ${getRadioValue('materiales')}\n`;
+
+      if (document.getElementById('adjunto').files.length > 0) {
+        cotizacionText += `\n*5. Archivo adjunto:*\n - El cliente tiene fotos/planos para compartir.`;
+      }
+
+      // --- Open WhatsApp ---
+      const whatsappURL = `https://wa.me/525548019358?text=${encodeURIComponent(cotizacionText)}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+
+</body>
+</html>

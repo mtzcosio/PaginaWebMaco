@@ -231,7 +231,7 @@
             </div>
           </div>
 
-          <!-- 6. Subir fotos del techo (Opcional)
+          <!-- 6. Subir fotos del techo (Opcional) -->
           <div class="form-section">
             <h4 class="resume-title">6. (Opcional) Subir fotos del techo</h4>
             <div class="row">
@@ -242,7 +242,7 @@
               </div>
             </div>
           </div>
-           -->
+          
 
           <div class="col-md-12 text-center">
             <button type="submit"><i class="bi bi-whatsapp"></i> Solicitar Cotización por WhatsApp</button>
@@ -317,7 +317,7 @@
         ` - Incluir Limpieza y Sellado: ${getRadioValue('limpieza_sellado')}\n` +
         (document.getElementById('fecha_tentativa').value ? ` - Fecha Tentativa: ${document.getElementById('fecha_tentativa').value}\n` : '') +
         (document.getElementById('comentarios').value ? `\n*5. Comentarios Adicionales:*\n${document.getElementById('comentarios').value}\n` : '') +
-        /*(document.getElementById('fotos_techo').files.length > 0 ? `\n*Adicional:* El cliente indica que tiene fotos para compartir.\n` : '') +*/
+        (document.getElementById('fotos_techo').files.length > 0 ? `\n*Adicional:* El cliente indica que tiene fotos para compartir.\n` : '') +
         `\nEste mensaje fue generado desde la página de cotizaciones de impermeabilización.`;
 
       const whatsappURL = `https://wa.me/525548019358?text=${encodeURIComponent(cotizacionText)}`;

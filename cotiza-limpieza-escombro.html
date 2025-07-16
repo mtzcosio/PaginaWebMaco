@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cotiza Limpieza y Retiro de Escombro - Servicios MACO</title>
+  <meta content="Cotiza tu servicio de limpieza de obra y retiro de escombro. Dejamos tus espacios listos para el siguiente paso. Servicio rápido y profesional." name="description">
+  <meta content="cotización limpieza obra, retiro escombro, limpieza post construcción, acarreo de escombro, MACO construcción" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/MacoFavicon.png" rel="icon">
+  <link href="assets/img/MacoFavicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/mainV1.css" rel="stylesheet">
+
+  <style>
+    #cotizacionForm .resume-title {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--accent-color);
+    }
+    #cotizacionForm .form-section {
+        margin-bottom: 2.5rem;
+    }
+    #cotizacionForm button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 12px 35px;
+        background-color: var(--accent-color);
+        border: none;
+        color: var(--contrast-color);
+        transition: background-color 0.3s;
+    }
+    #cotizacionForm button[type="submit"]:hover {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    }
+    .form-check-label {
+        margin-left: 0.5rem;
+    }
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Inicio</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>Sobre nosotros</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Servicios</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contacto</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="current">Cotización de Limpieza y Escombro</li>
+          </ol>
+        </nav>
+        <h1>Cotización de Limpieza y Retiro de Escombro</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <section id="cotizacion-limpieza-escombro" class="section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Espacios Limpios y Seguros</h2>
+        <p>Déjanos el trabajo pesado. Solicita una cotización para limpieza de obra y retiro de escombro.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <form id="cotizacionForm" class="p-4" style="background-color: var(--surface-color); border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.1);">
+
+          <!-- 1. Datos de Contacto -->
+          <div class="form-section">
+            <h4 class="resume-title">1. Datos de Contacto</h4>
+            <div class="row gy-4">
+              <div class="col-md-6"><input type="text" id="nombre" class="form-control" placeholder="Nombre completo" required></div>
+              <div class="col-md-6"><input type="tel" id="telefono" class="form-control" placeholder="Teléfono o WhatsApp" required></div>
+              <div class="col-md-12"><input type="email" id="email" class="form-control" placeholder="Correo electrónico (Opcional)"></div>
+            </div>
+          </div>
+
+          <!-- 2. Ubicación del Servicio -->
+          <div class="form-section">
+            <h4 class="resume-title">2. Ubicación del Servicio</h4>
+            <div class="row gy-4">
+              <div class="col-md-12"><input type="text" id="direccion" class="form-control" placeholder="Dirección del proyecto" required></div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Tipo de inmueble:</label>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_casa" value="Casa" required><label class="form-check-label" for="tipo_casa">Casa</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_depto" value="Departamento"><label class="form-check-label" for="tipo_depto">Departamento</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_obra" value="Obra en construcción"><label class="form-check-label" for="tipo_obra">Obra en construcción</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_local" value="Local comercial"><label class="form-check-label" for="tipo_local">Local comercial</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" name="tipo_inmueble" id="tipo_otro_radio" value="Otro"><label class="form-check-label" for="tipo_otro_radio">Otro:</label></div>
+                <input type="text" id="tipo_otro_texto" class="form-control mt-2" placeholder="Especificar otro">
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Tipo de servicio requerido -->
+          <div class="form-section">
+            <h4 class="resume-title">3. Tipo de servicio requerido</h4>
+            <div class="row gy-2">
+              <div class="col-md-6"><div class="form-check"><input class="form-check-input" type="checkbox" value="Limpieza general de obra" id="serv_limpieza_gral"><label class="form-check-label" for="serv_limpieza_gral">Limpieza general de obra</label></div></div>
+              <div class="col-md-6"><div class="form-check"><input class="form-check-input" type="checkbox" value="Retiro de escombro" id="serv_retiro"><label class="form-check-label" for="serv_retiro">Retiro de escombro</label></div></div>
+              <div class="col-md-6"><div class="form-check"><input class="form-check-input" type="checkbox" value="Limpieza profunda final" id="serv_limpieza_prof"><label class="form-check-label" for="serv_limpieza_prof">Limpieza profunda final</label></div></div>
+              <div class="col-md-6"><div class="form-check"><input class="form-check-input" type="checkbox" value="Carga y acarreo manual" id="serv_carga"><label class="form-check-label" for="serv_carga">Carga y acarreo manual</label></div></div>
+              <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="serv_otro_check"><label class="form-check-label" for="serv_otro_check">Otro:</label></div><input type="text" id="serv_otro_texto" class="form-control mt-2" placeholder="Especificar otro servicio"></div>
+            </div>
+          </div>
+
+          <!-- 4. Cantidad aproximada de escombro o residuos -->
+          <div class="form-section">
+            <h4 class="resume-title">4. Cantidad aproximada de escombro o residuos</h4>
+            <div class="form-check"><input class="form-check-input" type="radio" name="cantidad" id="cant_menos_1" value="Menos de 1 m³" required><label class="form-check-label" for="cant_menos_1">Menos de 1 m³</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="cantidad" id="cant_1_3" value="1 a 3 m³"><label class="form-check-label" for="cant_1_3">1 a 3 m³</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="cantidad" id="cant_3_5" value="3 a 5 m³"><label class="form-check-label" for="cant_3_5">3 a 5 m³</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="cantidad" id="cant_mas_5" value="Más de 5 m³"><label class="form-check-label" for="cant_mas_5">Más de 5 m³</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="cantidad" id="cant_nose" value="No estoy seguro"><label class="form-check-label" for="cant_nose">No estoy seguro</label></div>
+          </div>
+
+          <!-- 5. Acceso al lugar -->
+          <div class="form-section">
+            <h4 class="resume-title">5. Acceso al lugar</h4>
+            <div class="form-check"><input class="form-check-input" type="radio" name="acceso" id="acc_planta_baja" value="Planta baja" required><label class="form-check-label" for="acc_planta_baja">Planta baja</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="acceso" id="acc_elevador" value="Piso alto con elevador"><label class="form-check-label" for="acc_elevador">Piso alto con elevador</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="acceso" id="acc_sin_elevador" value="Piso alto sin elevador"><label class="form-check-label" for="acc_sin_elevador">Piso alto sin elevador</label></div>
+            <div class="form-check"><input class="form-check-input" type="radio" name="acceso" id="acc_limitado" value="Acceso limitado (entrada estrecha, sin rampa, etc.)"><label class="form-check-label" for="acc_limitado">Acceso limitado (entrada estrecha, sin rampa, etc.)</label></div>
+          </div>
+
+          <!-- 6. Transporte -->
+          <div class="form-section">
+            <h4 class="resume-title">6. ¿Deseas incluir transporte o camión para el retiro?</h4>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="transporte" id="trans_si" value="Sí" required><label class="form-check-label" for="trans_si">Sí</label></div>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="transporte" id="trans_no" value="No"><label class="form-check-label" for="trans_no">No</label></div>
+            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="transporte" id="trans_nose" value="No estoy seguro"><label class="form-check-label" for="trans_nose">No estoy seguro</label></div>
+          </div>
+
+          <!-- 7. Comentarios adicionales -->
+          <div class="form-section">
+            <h4 class="resume-title">7. Comentarios adicionales (opcional)</h4>
+            <textarea id="comentarios" class="form-control" rows="4" placeholder="Describe cualquier detalle importante..."></textarea>
+          </div>
+
+          <!-- 8. Adjuntar fotos -->
+          <div class="form-section">
+            <h4 class="resume-title">8. Adjuntar fotos del área o del escombro (opcional)</h4>
+            <label for="adjunto" class="form-label">Una foto nos ayudará a darte una cotización más precisa.</label>
+            <input class="form-control" type="file" id="adjunto" accept="image/*,application/pdf" multiple>
+            <div class="form-text">No enviaremos los archivos, solo nos notifica que tienes material para compartir por WhatsApp.</div>
+          </div>
+
+          <div class="col-md-12 text-center">
+            <button type="submit"><i class="bi bi-whatsapp"></i> Solicitar Cotización</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Servicios MACO</h3>
+      <p>Comprometidos con la calidad y la satisfacción del cliente en cada proyecto. Contáctanos para hacer realidad tus ideas.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/MantenimientoyConstruccionMACO"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/servmaco/"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/525548019358?text=Hola,%20vi%20su%20página%20y%20me%20interesa%20una%20cotización." target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1">Servicios MACO</strong> <span>Todos los derechos reservados</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by <a href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Form Logic -->
+  <script>
+    document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const getRadioValue = (name, otroTextFieldId) => {
+        const radio = document.querySelector(`input[name="${name}"]:checked`);
+        if (radio && radio.value === 'Otro') {
+          const otroTexto = document.getElementById(otroTextFieldId).value;
+          return `Otro: ${otroTexto || 'No especificado'}`;
+        }
+        return radio ? radio.value : 'No especificado';
+      };
+
+      const getCheckboxValues = (ids, otroCheckboxId, otroTextFieldId) => {
+          const values = [];
+          ids.forEach(id => {
+              if (document.getElementById(id).checked) {
+                  values.push(document.getElementById(id).value);
+              }
+          });
+          if (document.getElementById(otroCheckboxId) && document.getElementById(otroCheckboxId).checked) {
+              const otroTexto = document.getElementById(otroTextFieldId).value;
+              values.push(`Otro: ${otroTexto || 'No especificado'}`);
+          }
+          return values.length > 0 ? values.join(', ') : 'Ninguno seleccionado';
+      };
+
+      let cotizacionText = `*SOLICITUD DE COTIZACIÓN DE LIMPIEZA Y ESCOMBRO*\n\n` +
+        `*1. Datos de Contacto:*\n` +
+        ` - Nombre: ${document.getElementById('nombre').value}\n` +
+        ` - Teléfono/WhatsApp: ${document.getElementById('telefono').value}\n` +
+        (document.getElementById('email').value ? ` - Correo: ${document.getElementById('email').value}\n` : '') +
+        `\n*2. Ubicación del Servicio:*\n` +
+        ` - Dirección: ${document.getElementById('direccion').value}\n` +
+        ` - Tipo de inmueble: ${getRadioValue('tipo_inmueble', 'tipo_otro_texto')}\n` +
+        `\n*3. Tipo de servicio requerido:*\n` +
+        ` - ${getCheckboxValues(['serv_limpieza_gral', 'serv_retiro', 'serv_limpieza_prof', 'serv_carga'], 'serv_otro_check', 'serv_otro_texto')}\n` +
+        `\n*4. Cantidad aproximada de escombro:*\n` +
+        ` - ${getRadioValue('cantidad')}\n` +
+        `\n*5. Acceso al lugar:*\n` +
+        ` - ${getRadioValue('acceso')}\n` +
+        `\n*6. ¿Incluir transporte?:*\n` +
+        ` - ${getRadioValue('transporte')}\n`;
+
+      const comentarios = document.getElementById('comentarios').value;
+      if (comentarios) {
+        cotizacionText += `\n*7. Comentarios adicionales:*\n${comentarios}\n`;
+      }
+
+      if (document.getElementById('adjunto').files.length > 0) {
+        cotizacionText += `\n*8. Archivo adjunto:*\n - El cliente tiene fotos para compartir.`;
+      }
+
+      const whatsappURL = `https://wa.me/525548019358?text=${encodeURIComponent(cotizacionText)}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+
+</body>
+</html>
