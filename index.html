@@ -43,16 +43,24 @@
     
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
+     <div id="navmenu-container"></div>
+    <script>
+      fetch('menu.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('navmenu-container').innerHTML = data);
+    </script>
+    <!--
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Inicio</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>Sobre nosotros</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resumen </span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Servicios</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contacto</span></a></li>
+      <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Inicio</span></a></li>
+      <li><a href="#about"><i class="bi bi-person navicon"></i><span>Sobre nosotros</span></a></li>
+      <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resumen </span></a></li>
+      <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+      <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Servicios</span></a></li>
+      <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contacto</span></a></li>
       </ul>
     </nav>
+    -->
 
   </header>
 
