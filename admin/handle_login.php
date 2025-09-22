@@ -1,5 +1,6 @@
 <?php
-// admin/handle_login.php
+// admin/handle_login.php 
+
 
 // Iniciar la sesión al principio de todo. Es crucial para la seguridad y el estado del usuario.
 session_start();
