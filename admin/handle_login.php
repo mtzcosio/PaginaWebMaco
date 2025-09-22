@@ -26,7 +26,7 @@ if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
 // Obtener y sanear las entradas del formulario
 $email = $_POST['email'] ?? '';
 $input_password = $_POST['password'] ?? '';
-
+/*
 // Validar que los campos no estén vacíos
 if (empty($email) || empty($input_password)) {
     header("Location: index.php?error=credentials_required");
@@ -99,3 +99,4 @@ $stmt->close();
 $conn->close();
 header("Location: index.php?error=invalid_credentials");
 exit();
+*/
