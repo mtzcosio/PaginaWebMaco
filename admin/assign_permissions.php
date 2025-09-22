@@ -84,6 +84,13 @@ require_once 'header.php';
                 <input type="hidden" name="role_id" value="<?php echo $role_id; ?>">
                 <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrf_token, ENT_QUOTES, 'UTF-8'); ?>">
                 
+                <?php if (!empty($all_permissions)): ?>
+                <div class="form-check form-switch mb-3 border-bottom pb-3">
+                    <input class="form-check-input" type="checkbox" id="selectAllPermissions">
+                    <label class="form-check-label fw-bold" for="selectAllPermissions">Seleccionar / Deseleccionar Todos los Visibles</label>
+                </div>
+                <?php endif; ?>
+
                 <div class="row" id="permissionsList">
                     <?php if (empty($all_permissions)): ?>
                         <div class="col-12" id="no-permissions-message"><p class="text-center">No hay permisos activos para asignar.</p></div>
@@ -91,7 +98,7 @@ require_once 'header.php';
                         <?php foreach ($all_permissions as $permission): ?>
                             <div class="col-md-4 col-sm-6 mb-3 permission-item">
                                 <div class="form-check form-switch form-check-lg">
-                                    <input class="form-check-input" type="checkbox" name="permission_ids[]" value="<?php echo $permission['PermissionID']; ?>" id="perm_<?php echo $permission['PermissionID']; ?>" <?php echo in_array($permission['PermissionID'], $assigned_permissions) ? 'checked' : ''; ?>>
+                                    <input class="form-check-input permission-checkbox" type="checkbox" name="permission_ids[]" value="<?php echo $permission['PermissionID']; ?>" id="perm_<?php echo $permission['PermissionID']; ?>" <?php echo in_array($permission['PermissionID'], $assigned_permissions) ? 'checked' : ''; ?>>
                                     <label class="form-check-label" for="perm_<?php echo $permission['PermissionID']; ?>">
                                         <strong><?php echo htmlspecialchars($permission['PermissionName'], ENT_QUOTES, 'UTF-8'); ?></strong><br>
                                         <small class="text-muted fst-italic"><?php echo htmlspecialchars($permission['Description'], ENT_QUOTES, 'UTF-8'); ?></small>
@@ -119,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterInput = document.getElementById('permissionFilter');
     const permissionItems = document.querySelectorAll('#permissionsList .permission-item');
     const noResultsMessage = document.getElementById('no-results-message');
+    const selectAllCheckbox = document.getElementById('selectAllPermissions');
 
     if (filterInput) {
         filterInput.addEventListener('keyup', function() {
@@ -136,6 +144,20 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             noResultsMessage.classList.toggle('d-none', visibleCount > 0);
+        });
+    }
+
+    if (selectAllCheckbox) {
+        selectAllCheckbox.addEventListener('change', function() {
+            permissionItems.forEach(function(item) {
+                // Solo afecta a los elementos visibles (no filtrados)
+                if (item.style.display !== 'none') {
+                    const checkbox = item.querySelector('.permission-checkbox');
+                    if (checkbox) {
+                        checkbox.checked = selectAllCheckbox.checked;
+                    }
+                }
+            });
         });
     }
 });

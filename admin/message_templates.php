@@ -79,7 +79,7 @@ require_once 'header.php';
                                         <span class="badge bg-<?php echo $template['is_active'] ? 'success' : 'secondary'; ?>"><?php echo $template['is_active'] ? 'Activa' : 'Inactiva'; ?></span>
                                     </td>
                                     <td class="text-end">
-                                        <button type="button" class="btn btn-sm btn-success test-btn" data-bs-toggle="modal" data-bs-target="#testTemplateModal" data-key="<?php echo htmlspecialchars($template['template_key'], ENT_QUOTES, 'UTF-8'); ?>" title="Probar Plantilla"><i class="bi bi-send"></i></button>
+                                        <button type="button" class="btn btn-sm btn-success test-btn" data-bs-toggle="modal" data-bs-target="#testTemplateModal" data-template='<?php echo htmlspecialchars(json_encode($template), ENT_QUOTES, 'UTF-8'); ?>' title="Probar Plantilla"><i class="bi bi-send"></i></button>
                                         <button type="button" class="btn btn-sm btn-info preview-btn" data-bs-toggle="modal" data-bs-target="#previewTemplateModal" data-template='<?php echo htmlspecialchars(json_encode($template), ENT_QUOTES, 'UTF-8'); ?>' title="Vista Previa"><i class="bi bi-eye"></i></button>
                                         <button type="button" class="btn btn-sm btn-warning edit-btn" data-bs-toggle="modal" data-bs-target="#editTemplateModal" data-template='<?php echo htmlspecialchars(json_encode($template), ENT_QUOTES, 'UTF-8'); ?>' title="Editar"><i class="bi bi-pencil-square"></i></button>
                                         <form action="handle_message_templates.php" method="POST" class="d-inline">
@@ -171,10 +171,14 @@ require_once 'header.php';
                         <input type="text" class="form-control" id="test_recipient" name="recipient" placeholder="ej: test@dominio.com o +525512345678" required>
                         <small class="form-text text-muted">Email o número de teléfono para enviar la prueba.</small>
                     </div>
-                    <div class="mb-3"><label for="test_json_data" class="form-label">Datos JSON de Prueba</label><textarea class="form-control" id="test_json_data" name="json_data" rows="8" placeholder='{\n  "nombre_usuario": "Juan Pérez",\n  "enlace_factura": "https://ejemplo.com/factura/123"\n}' required></textarea><small class="form-text text-muted">Introduce los datos para reemplazar los placeholders `{{...}}`.</small></div>
+                    <div class="mb-3"><label for="test_json_data" class="form-label">Datos JSON de Prueba</label><textarea class="form-control" id="test_json_data" name="json_data" rows="8" placeholder='{"nombre_usuario": "Juan Pérez", "enlace_activacion": "https://ejemplo.com/factura/123"}' required></textarea><small class="form-text text-muted">Introduce los datos para reemplazar los placeholders `{{...}}`.</small></div>
                     <div id="testResult" class="mt-3"></div>
                 </div>
-                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button><button type="submit" class="btn btn-primary">Procesar y Ver Previa</button></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" title="Muestra cómo se verá el mensaje procesado sin enviarlo."><i class="bi bi-display"></i> Procesar y Ver Previa</button>
+                    <button type="button" id="sendTestEmailBtn" class="btn btn-success" title="Envía un correo real al destinatario de prueba."><i class="bi bi-send-check-fill"></i> Enviar Correo de Prueba</button>
+                </div>
             </form>
         </div>
     </div>
@@ -266,18 +270,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const testModal = document.getElementById('testTemplateModal');
     const testForm = document.getElementById('testTemplateForm');
     const testResultDiv = document.getElementById('testResult');
+    const sendTestEmailBtn = document.getElementById('sendTestEmailBtn');
 
     testModal.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
-        const templateKey = button.getAttribute('data-key');
+        const template = JSON.parse(button.getAttribute('data-template'));
         const modal = this;
 
-        modal.querySelector('#test_template_key').value = templateKey;
+        modal.querySelector('#test_template_key').value = template.template_key;
+
+        // Habilitar/deshabilitar botón de envío y cambiar placeholder según el canal
+        if (template.channel !== 'email') {
+            sendTestEmailBtn.style.display = 'none';
+            modal.querySelector('#test_recipient').placeholder = 'ej: +525512345678 (no se enviará)';
+        } else {
+            sendTestEmailBtn.style.display = 'inline-block';
+            modal.querySelector('#test_recipient').placeholder = 'ej: test@dominio.com';
+        }
+
         // Limpiar resultados previos y rellenar con ejemplos
         testResultDiv.innerHTML = '';
         testResultDiv.className = 'mt-3';
         modal.querySelector('#test_json_data').value = '{\n  "nombre_usuario": "Juan Pérez",\n  "enlace_factura": "https://ejemplo.com/factura/123"\n}';
-        modal.querySelector('#test_recipient').value = 'test@ejemplo.com';
+        modal.querySelector('#test_recipient').value = template.channel === 'email' ? 'test@ejemplo.com' : '';
     });
 
     testForm.addEventListener('submit', function(event) {
@@ -341,6 +356,48 @@ document.addEventListener('DOMContentLoaded', function () {
             submitButton.innerHTML = originalButtonText;
         });
     });
+
+    if (sendTestEmailBtn) {
+        sendTestEmailBtn.addEventListener('click', function() {
+            if (!testForm.checkValidity()) {
+                testForm.reportValidity();
+                return;
+            }
+
+            const formData = new FormData(testForm);
+            const originalButtonText = this.innerHTML;
+            
+            this.disabled = true;
+            this.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+            testResultDiv.innerHTML = '';
+            testResultDiv.className = 'alert alert-info';
+            testResultDiv.textContent = 'Intentando enviar el correo de prueba...';
+
+            fetch('handle_template_send_test.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json().then(data => ({ status: response.status, body: data })))
+            .then(({ status, body }) => {
+                if (body.status === 'success') {
+                    testResultDiv.className = 'alert alert-success';
+                    testResultDiv.textContent = body.message;
+                } else {
+                    testResultDiv.className = 'alert alert-danger';
+                    testResultDiv.textContent = `Error: ${body.message}`;
+                }
+            })
+            .catch(error => {
+                testResultDiv.className = 'alert alert-danger';
+                testResultDiv.textContent = 'Ocurrió un error de red. Por favor, revisa la consola.';
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                this.disabled = false;
+                this.innerHTML = originalButtonText;
+            });
+        });
+    }
 
     // Script para el filtro de la tabla
     const filterInput = document.getElementById('templateFilter');
