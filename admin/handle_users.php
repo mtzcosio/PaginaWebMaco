@@ -125,7 +125,7 @@ try {
             $stmt->close();
             
             // Opcional: Guardar en historial de contraseñas
-            $stmt_hist = $conn->prepare("INSERT INTO PasswordHistory (UserID, PasswordHash, ChangedAt) VALUES (?, ?, NOW())");
+            $stmt_hist = $conn->prepare("INSERT INTO passwordhistory (UserID, PasswordHash, ChangedAt) VALUES (?, ?, NOW())");
             $stmt_hist->bind_param("is", $user_id, $password_hash);
             $stmt_hist->execute();
             $stmt_hist->close();
